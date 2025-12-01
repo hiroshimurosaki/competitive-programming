@@ -13,24 +13,19 @@ int main(){
         ll lucro = 0;
 
         cin >> n >> a >> b;
+            ll aux1 = (b+1) - a;
+            if(aux1>n){
+                a = aux1; 
+            }
 
-        if(b<=a){
-            lucro = n*a;
-        }else{
-            ll aux = b-a;
-            ll as = a;
-            if(aux > n){
-                aux -= aux-a;
-                as += aux-a;
+            if(a >= b){
+                lucro = a*n;
             } else {
-                as -= aux;
+                lucro += 
             }
-            if(aux == 1){
-                lucro = (a*(n-1))+b;
-            } else {
-                lucro += (a + as + b)*(aux/2);
-                lucro += a*(n-aux);
-            }
+            
+
+            
         }
         cout << lucro << endl;
     }
