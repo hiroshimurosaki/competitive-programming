@@ -2,21 +2,6 @@
 typedef long long int ll;
 using namespace std;
 
-// ll bb(vector<ll> v, ll high, ll low, ll alvo){
-//     if(low>high){
-//         return -1;
-//     }
-
-//     ll mid = low + (high-low)/2;
-
-//     if(v[mid] == alvo){
-//         return mid;
-//     } else if (v[mid] < alvo){
-//         return bb(v, mid+1, high, alvo);
-//     } else {
-//         return bb(v, low, mid-1, alvo);
-//     }
-// }
 
 int main(){
 
@@ -42,4 +27,5 @@ int main(){
     }
 
     sort(apartamentos.begin(), apartamentos.end());
+    
 }
