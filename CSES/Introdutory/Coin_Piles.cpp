@@ -8,26 +8,30 @@ int main(){
     ll a, b;
     cin >> t;
 
-    for(ll i=0; i<t;i++){
+    for(ll i = 0; i<t; i++){
         cin >> a >> b;
-        ll maior;
-        ll menor;
-        if(a>b){
-            maior = a;
-            menor = b;
-        }else{
-            maior = b;
-            menor = a;
-        }
+    
+        ll maior = max(a,b);
+        ll menor = min(a,b);
         ll diferenca = maior - menor;
-            if((((maior%2 == 0 && menor%2 !=0) || (menor%2 == 0 && maior%2 != 0)) && (diferenca <= menor)) || ((maior%3 == 0 && menor%3 == 0) && (maior == menor)) ||
-                ((diferenca%2 != 0) && (diferenca <= menor))) {
+        
+        if(maior > 2*menor){
+            cout << "NO" << endl;
+        } else {
+            ll x = maior - diferenca*2;
+    
+            if(x%3 == 0){
                 cout << "YES" << endl;
             } else {
                 cout << "NO" << endl;
             }
-            
+    
+        }
     }
+
+    return 0;
+
+
 }
 
     
