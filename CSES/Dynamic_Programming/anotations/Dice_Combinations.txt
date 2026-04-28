@@ -1,0 +1,44 @@
+certo pensando.
+quantas maneiras possíveis posso atingir a soma n jogando dados?
+
+ex : soma 2
+2
+1 + 1
+output = 2
+
+ex: soma 3
+1 + 1 + 1
+2 + 1
+1 + 2
+3
+output = 4
+
+ex: soma 4
+4 -> s += 1
+3 + 1 -> s += 1 + a3
+2 + 2 -> s += a2
+
+output = 8
+
+ex: soma 5
+1 + 1 + 1 + 1 + 1
+2 + 1 + 1 + 1
+1 + 2 + 1 + 1
+1 + 1 + 2 + 1
+1 + 1 + 1 + 2
+3 + 1 + 1
+1 + 3 + 1
+1 + 1 + 3
+2 + 2 + 1
+1 + 2 + 2
+2 + 1 + 2
+4 + 1
+1 + 4
+3 + 2
+2 + 3
+5
+tentando achar a lógica
+
+2 -> (2 e 1+1) a2 = 2
+3 -> (2+1, 1+2 e 3), como 2 = a, é a3 = 4
+4 -> (4, 3 + 1, 1 + 3)   

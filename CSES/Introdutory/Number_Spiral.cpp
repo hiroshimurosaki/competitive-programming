@@ -4,33 +4,35 @@ using namespace std;
 
 int main(){
 
-    ll n;
+    ll t;
     ll x, y;
-    cin >> n;
-    ll resp;
+    cin >> t;
     
-    for(int i=0; i<n; i++){
+    for(ll i = 0; i<t; i++){
+
         cin >> x >> y;
 
-        if(x>y){
-            resp = (x*x)-(x-1);
-            if(y%2 == 0){
-                resp += x-y;
+        ll maior = max(x,y);
+        ll pos = 0;
+        
+        if(maior == x){
+            if(x%2==0){
+                pos = x*x - (y - 1);
             } else {
-                resp -= x-y;
+                pos = (x-1)*(x-1) + y;
             }
         } else {
-            resp = (y*y)-(y-1);
-            if(x%2 == 0){
-                resp += y-x;
+            if(y%2!=0){
+                pos = y*y - (x - 1);
             } else {
-                resp -= y-x;
+                pos = (y-1)*(y-1) + x;
             }
         }
-        
-        cout << resp << endl;
 
+        cout << pos << endl;
 
     }
+
+    return 0;
     
 }

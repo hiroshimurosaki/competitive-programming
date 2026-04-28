@@ -1,0 +1,35 @@
+quero encontrar a menor soma possível aplicando 
+o módulo de p e q (q sempre é maior que p) em intervalos do vetor de tamanho 
+n. o intervalo precisa ter tamanho mínimo k.
+só posso escolher um dos módulos para ser aplicado 
+a cada intervalo.
+posso fazer essa operação de (escolher um intervalo no vetor -> aplicar o módulo de p ou q)
+quantas vezes eu quiser, desde que eu consiga a menor soma possível.
+exemplos:
+caso 1 -> 
+4 3 3 4
+1 2 3 4 
+output correto -> 3
+pois:
+
+aplico mod 3 no intervalo [1,3]
+1 2 0 4
+
+aplico mod 4 no intervalo [2,4]
+1 2 0 0
+
+portanto soma final -> 3
+
+caso 2 -> 
+6 4 9 20
+18 27 180 9 45 99
+
+aplico módulo de 9 em todos os elementos
+
+0 0 0 0 0 0 0 0
+soma ideal -> 0
+
+
+analise se o caminho guloso que estou tendo pra minha solução faz sentido.
+entenda também que a soma máxima de n depois de todos os casos de teste não excede 10^5.
+
